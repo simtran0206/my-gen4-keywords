@@ -32,6 +32,7 @@ jobs:
 
     - name: Download Gradle
       uses: suisei-cn/actions-download-file@v1.3.0
+      id: gradlefile
       with:
         url: "https://gradle.org/next-steps/?version=8.8&format=all"
         target: C:/Users/public/gradle
@@ -72,6 +73,7 @@ jobs:
 
     - name: Download WinAppDriver
       uses: suisei-cn/actions-download-file@v1.3.0
+      id: winAppDriver
       with:
         url: "https://github.com/microsoft/WinAppDriver/releases/download/v1.2.99/WindowsApplicationDriver-1.2.99-win-${{steps.winappdriver.outputs.version}}.exe"
         target: C:/Users/public
@@ -86,6 +88,7 @@ jobs:
 
     - name: Download sample app test(KSE)
       uses: suisei-cn/actions-download-file@v1.3.0
+      id: ksefile
       with:
         url: "https://download.katalon.com/9.6.0/Katalon_Studio_Windows_64-9.6.0.zip"
         target: C:/Users/public
