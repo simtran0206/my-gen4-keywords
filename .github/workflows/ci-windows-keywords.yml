@@ -73,7 +73,7 @@ jobs:
 
     - name: Download WinAppDriver
       uses: suisei-cn/actions-download-file@v1.3.0
-      id: winAppDriver
+      id: winappdriverfile
       with:
         url: "https://github.com/microsoft/WinAppDriver/releases/download/v1.2.99/WindowsApplicationDriver-1.2.99-win-${{steps.winappdriver.outputs.version}}.exe"
         target: C:/Users/public
