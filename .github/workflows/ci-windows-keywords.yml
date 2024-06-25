@@ -60,7 +60,7 @@ jobs:
     - name: Parse WinAppDriver version
       id: winappdriver
       run: |
-        arch = (WMIC OS GET Caption | FindStr /v /C:"caption" | Select-Object -ExpandProperty Caption).Trim()
+        arch = (Get-WmiObject Win32_OperatingSystem).Caption.Trim()
         if ( $(arch) -match "x86_64"){
           $version=x64
           echo "version=$version" >> $env:GITHUB_OUTPUT
@@ -87,7 +87,7 @@ jobs:
         if (Test-Path "C:\Program Files (x86)\Windows Application Driver\WinAppDriver.exe") {
           echo "WinAppDriver already installed"
         } else {
-          PowerShell -ExecutionPolicy Bypass -NoProfile -File C:/Users/public/WindowsApplicationDriver-1.2.99-win-${{steps.winappdrivers.outputs.version}}.exe
+          PowerShell -ExecutionPolicy Bypass -NoProfile -File C:/Users/public/WindowsApplicationDriver-1.2.99-win-${{steps.winappdriver.outputs.version}}.exe
         }
 
     - name: Download sample app test(KSE)
