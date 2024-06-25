@@ -48,6 +48,11 @@ jobs:
         } else {
           PowerShell -ExecutionPolicy Bypass -NoProfile -File C:/Users/public/WindowsApplicationDriver-1.2.99-win-${{steps.winappdriver.outputs.version}}.exe
         }
+
+    - name: Check running processess before starting WinAppDriver
+      run: |
+        Get-Process | Format-List Name
+
     - name: Start WinAppDriver
       run: |
         & { Start-Process -NoNewWindow 'C:\Program Files (x86)\Windows Application Driver\WinAppDriver.exe' -RedirectStandardOutput "C:\Users\public\winappdriver.txt" }
