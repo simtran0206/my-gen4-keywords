@@ -123,6 +123,6 @@ jobs:
     - name: Running Windows keywords test script
       shell: cmd
       run: |
-        set projectPath=%cd%\my-gen4-keywords\web-keywords-automation.prj
+        set projectPath=%cd%\web-keywords-automation.prj
         cd Katalon_Studio_Engine_Windows_64-${{steps.kre.outputs.version }}
         katalonc.exe -noSplash -runMode=console -projectPath="%projectPath%" -retry=0 -testSuitePath="Test Suites/Windows Keywords Test" -browserType="Windows" -executionProfile="windows profile" -apiKey="4b2accba-07f7-425d-a371-8a864400fb8d" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true -webui.autoUpdateDrivers=true
