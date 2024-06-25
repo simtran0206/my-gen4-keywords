@@ -54,4 +54,4 @@ jobs:
         
     - name: Check for WinAppDriver process
       run: |
-        Get-Process | Format-List Name, Id, CPU -AutoSize
+        Get-Process | Format-List Name, Id, CPU
