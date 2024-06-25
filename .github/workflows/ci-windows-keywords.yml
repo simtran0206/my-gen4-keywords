@@ -34,7 +34,7 @@ jobs:
       uses: suisei-cn/actions-download-file@v1.3.0
       id: gradlefile
       with:
-        url: "https://gradle.org/next-steps/?version=8.8&format=all"
+        url: "https://services.gradle.org/distributions/gradle-8.8-all.zip"
         target: C:/Users/public/gradle
 
     - name: Unzip and setup Gradle
