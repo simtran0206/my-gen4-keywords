@@ -49,7 +49,6 @@ jobs:
 
     - name: Install Katalon Gradle dependencies
       run: | 
-        cd ${{github.workspace}}/qe-gen4-keywords
         gradle katalonCopyDependencies
     
     - name: Change Screen Resolution
