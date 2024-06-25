@@ -65,7 +65,7 @@ jobs:
           $version="x64"
           echo "version=$version" >> $env:GITHUB_OUTPUT
         }
-        elif ( $(arch) -match "arm64" ){
+        elseif ( $(arch) -match "arm64" ){
           $version="arm64"
           echo "version=$version" >> $env:GITHUB_OUTPUT
         }
