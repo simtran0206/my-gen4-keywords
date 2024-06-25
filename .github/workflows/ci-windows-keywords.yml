@@ -62,15 +62,15 @@ jobs:
       run: |
         arch = (Get-WmiObject Win32_OperatingSystem).Caption.Trim()
         if ( $(arch) -match "x86_64"){
-          $version=x64
+          $version="x64"
           echo "version=$version" >> $env:GITHUB_OUTPUT
         }
         elif ( $(arch) -match "arm64" ){
-          $version=arm64
+          $version="arm64"
           echo "version=$version" >> $env:GITHUB_OUTPUT
         }
         else {
-          $version=x86
+          $version="x86"
           echo "version=$version" >> $env:GITHUB_OUTPUT
         }
         fi
