@@ -50,7 +50,7 @@ jobs:
         }
     - name: Start WinAppDriver
       run: |
-        Start-Process -FilePath "C:\Program Files (x86)\Windows Application Driver\WinAppDriver.exe" &
+        & { Start-Process -NoNewWindow 'C:\Program Files (x86)\Windows Application Driver\WinAppDriver.exe' -RedirectStandardOutput "C:\test\winappdriver.txt" }
         
     - name: Check for WinAppDriver process
       run: |
