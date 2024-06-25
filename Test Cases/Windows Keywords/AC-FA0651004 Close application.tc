@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AC-FA0651004 Close application</name>
+   <tag>fast-test, api, p2, windows-keywords</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d9bafd7f-7bd7-465b-964e-cccb3049355a</testCaseGuid>
+</TestCaseEntity>

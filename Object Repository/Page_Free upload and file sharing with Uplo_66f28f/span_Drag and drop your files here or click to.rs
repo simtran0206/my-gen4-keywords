@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_Drag and drop your files here or click to</name>
+   <tag></tag>
+   <elementGuidId>b921930f-f3bd-469c-b50f-86d7a5b8143a</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='content-scrollable-page']/div/div/div/div/div[2]/div[2]/div/span</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>span.uploader_display_desk__Py48n</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:text=&quot;Drag and drop your files here or click to&quot;i</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>258473a7-beb4-4c89-b248-a8b039b8bd2e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>uploader_display_desk__Py48n</value>
+      <webElementGuid>f2511e62-b086-46ea-9d71-ef361ceee089</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Drag and drop your files here or click to</value>
+      <webElementGuid>e0233ea2-e178-4b27-aed6-0acf49f13cc3</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;content-scrollable-page&quot;)/div[@class=&quot;common_wrapper_int_home__3FKpQ&quot;]/div[@class=&quot;react-reveal&quot;]/div[@class=&quot;common_wrapper_int_uploader__J4HYE&quot;]/div[@class=&quot;common_anim_scaleIn___QKcA&quot;]/div[@class=&quot;cards_card__z97R0 cards_dnd_inactive__pewJe undefined m-0&quot;]/div[@class=&quot;uploader_dragdrop_wrapper__EUEkt&quot;]/div[@class=&quot;uploader_dragdrop_inner__Lx6_F&quot;]/span[@class=&quot;uploader_display_desk__Py48n&quot;]</value>
+      <webElementGuid>a8b67938-0a9f-48bf-81ce-8715b87f67b8</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='content-scrollable-page']/div/div/div/div/div[2]/div[2]/div/span</value>
+      <webElementGuid>cabd3560-70ac-45ce-bdaa-9d908b23a2e7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Select your files to upload'])[1]/following::span[1]</value>
+      <webElementGuid>97062cae-b985-4aad-b454-403fe6e69675</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Contact'])[1]/following::span[2]</value>
+      <webElementGuid>3a1463bf-907b-483b-af62-4485c6ab8aed</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Type here to'])[1]/preceding::span[1]</value>
+      <webElementGuid>68460efe-5cd0-417c-8a60-02e6bb3a7cdf</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Add files'])[1]/preceding::span[2]</value>
+      <webElementGuid>47c27cbc-9356-426a-9c06-a7272e97578f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Drag and drop your files here or click to']/parent::*</value>
+      <webElementGuid>f3c3da5a-cd65-43d4-b0bd-13a41084b0ca</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/span</value>
+      <webElementGuid>c762b18c-7a39-4850-a050-77a9b83f66d0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//span[(text() = 'Drag and drop your files here or click to' or . = 'Drag and drop your files here or click to')]</value>
+      <webElementGuid>a875faf7-2982-4523-b932-70acf47cb09c</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

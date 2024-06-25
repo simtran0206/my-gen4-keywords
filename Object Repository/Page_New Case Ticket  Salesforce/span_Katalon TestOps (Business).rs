@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_Katalon TestOps (Business)</name>
+   <tag></tag>
+   <elementGuidId>2348b516-2c61-45e5-b038-8d72c534cf0b</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>#combobox-button-248-6-248 > span.slds-media__body > span.slds-truncate</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//lightning-base-combobox-item[@id='combobox-button-248-6-248']/span[2]/span</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:text=&quot;Katalon TestOps (Business)&quot;i</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>true</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>e6ab9254-4e9a-45ac-a93e-ae489d472c59</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>slds-truncate</value>
+      <webElementGuid>57161263-dc7e-4558-a747-b494c6eea3f4</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>title</name>
+      <type>Main</type>
+      <value>Katalon TestOps (Business)</value>
+      <webElementGuid>0b1b123f-443f-44e4-96b2-ac06caea8b7c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Katalon TestOps (Business)</value>
+      <webElementGuid>99b7daca-b21b-4bef-8364-f2cc43e32e11</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;combobox-button-248-6-248&quot;)/span[@class=&quot;slds-media__body&quot;]/span[@class=&quot;slds-truncate&quot;]</value>
+      <webElementGuid>1a0f9c13-a45e-4c7a-82ab-003a5d13a2e5</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//lightning-base-combobox-item[@id='combobox-button-248-6-248']/span[2]/span</value>
+      <webElementGuid>1d118bd6-7852-4906-ad47-f3ad6ab8cc64</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Katalon Runtime Engine (Floating)'])[1]/following::span[3]</value>
+      <webElementGuid>c7a4b9a3-58bb-4303-b8f5-667b849a73d9</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Katalon Runtime Engine (Node-Locked)'])[1]/following::span[6]</value>
+      <webElementGuid>01f62a8e-960b-4d4e-bbba-33c3e10f16e4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Katalon TestOps (Enterprise)'])[1]/preceding::span[2]</value>
+      <webElementGuid>4002c81c-eeb9-48f8-b158-a3e537705eb0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Katalon TestCloud (per Session)'])[1]/preceding::span[5]</value>
+      <webElementGuid>24c14d35-d266-4e5d-a1d7-96c84d2b57ac</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Katalon TestOps (Business)']/parent::*</value>
+      <webElementGuid>7f9b1a3a-2051-4ec3-a210-c9199663635c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//lightning-base-combobox-item[7]/span[2]/span</value>
+      <webElementGuid>03939b9a-acc6-47a4-830d-30860da426ed</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//span[@title = 'Katalon TestOps (Business)' and (text() = 'Katalon TestOps (Business)' or . = 'Katalon TestOps (Business)')]</value>
+      <webElementGuid>f612a7f9-9b8c-4696-ab96-83fe2a2a4e28</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

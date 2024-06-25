@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AC-FA0651031 Verify equal</name>
+   <tag>fast-test, api, p2, windows-keywords</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a468bace-9eec-40f5-8125-70432c30082b</testCaseGuid>
+</TestCaseEntity>

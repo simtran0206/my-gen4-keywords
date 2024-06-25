@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AC-FA0651026 Switch to window title</name>
+   <tag>fast-test, api, p2, windows-keywords</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>3e4eab83-d140-485a-adda-e999b0fdd464</testCaseGuid>
+</TestCaseEntity>

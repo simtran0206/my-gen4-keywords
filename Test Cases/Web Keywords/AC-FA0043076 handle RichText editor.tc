@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AC-FA0043076 handle RichText editor</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>613d7b5e-ccc8-4678-90c5-c7afb68238c8</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>fc496771-3a4a-4d3a-a182-f48698523ce7</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>99f8f9b0-eadc-4813-9c3a-9b053dbd1467</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>5e17d5f0-1bf7-4e73-8055-f4033cab4aa0</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>7b2dfeb3-01a2-4dc5-99c1-d9c7440a9cdc</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'&lt;p style=&quot;&quot;>&lt;code data-mce-selected=&quot;inline-boundary&quot;>this is a block of code&lt;/code>&lt;/p>&lt;div id=&quot;katalon&quot; style=&quot;top: 0px;&quot;>&lt;div id=&quot;katalon-rec_elementInfoDiv&quot; style=&quot;display: block;&quot;>&lt;/div>&lt;/div>'</defaultValue>
+      <description></description>
+      <id>fc496771-3a4a-4d3a-a182-f48698523ce7</id>
+      <masked>false</masked>
+      <name>var_basicHTML</name>
+   </variable>
+   <variable>
+      <defaultValue>'&lt;p>&lt;img src=&quot;https://europe1.discourse-cdn.com/katalon/original/3X/c/5/c597526b21d7d4ee6df5abe57312076c3a652eea.svg&quot; alt=&quot;Katalon Community&quot; id=&quot;site-logo&quot; class=&quot;logo-big&quot;>&lt;/p>'</defaultValue>
+      <description></description>
+      <id>99f8f9b0-eadc-4813-9c3a-9b053dbd1467</id>
+      <masked>false</masked>
+      <name>var_anImageLinkValue</name>
+   </variable>
+   <variable>
+      <defaultValue>'innerHTML'</defaultValue>
+      <description></description>
+      <id>5e17d5f0-1bf7-4e73-8055-f4033cab4aa0</id>
+      <masked>false</masked>
+      <name>var_attributeName</name>
+   </variable>
+   <variable>
+      <defaultValue>'&lt;p>testing&lt;/p>&lt;p>Try it out by typing in here or see more &lt;a href=&quot;examples&quot;>examples&lt;/a>.&lt;/p>'</defaultValue>
+      <description></description>
+      <id>7b2dfeb3-01a2-4dc5-99c1-d9c7440a9cdc</id>
+      <masked>false</masked>
+      <name>var_basicHTML_proemirror</name>
+   </variable>
+</TestCaseEntity>

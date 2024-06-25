@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AC-FA0651012 Get driver</name>
+   <tag>fast-test, api, p2, windows-keywords</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8c57489f-ab51-4de0-9727-f62299ed5ca8</testCaseGuid>
+</TestCaseEntity>

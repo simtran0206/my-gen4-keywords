@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Fy23 Global Forecast</name>
+   <tag></tag>
+   <elementGuidId>3f1a6676-4627-43b7-a134-56cd50e54ffb</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='Home'])[1]/following::a[1]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:role=link[name=&quot;Fy23 Global Forecast&quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>true</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>d122110c-a9ec-42f2-ab4a-02bc58799fe8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>slds-context-bar__label-action dndItem</value>
+      <webElementGuid>1713fbad-0159-455f-834b-a7bb1447e6ca</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>/lightning/n/X2023_Global_Forecast</value>
+      <webElementGuid>d04f80c0-e659-4b1a-9e6c-c67b63f2ed3f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>title</name>
+      <type>Main</type>
+      <value>Fy23 Global Forecast</value>
+      <webElementGuid>229fcf3a-dd42-4163-b14b-df7e85cc59b1</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tabindex</name>
+      <type>Main</type>
+      <value>0</value>
+      <webElementGuid>8f95c55b-dd99-491e-9887-2b2fdf4cd1d0</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>draggable</name>
+      <type>Main</type>
+      <value>false</value>
+      <webElementGuid>95c8d735-74fa-43b8-9450-36dbc980511b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>aria-current</name>
+      <type>Main</type>
+      <value>false</value>
+      <webElementGuid>776b2d1d-51e1-4166-b6c0-cea343e135ad</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Fy23 Global Forecast</value>
+      <webElementGuid>644418b5-3721-48c5-b410-71025e586c0e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[@class=&quot;desktop slds-wcag&quot;]/div[@class=&quot;desktop container forceStyle oneOne navexDesktopLayoutContainer lafAppLayoutHost forceAccess tablet&quot;]/div[@class=&quot;viewport&quot;]/section[@class=&quot;layoutContent stage panelSlide hasFixedFooter&quot;]/div[@class=&quot;none navexStandardManager&quot;]/div[@class=&quot;slds-no-print oneAppNavContainer&quot;]/one-appnav[1]/div[@class=&quot;slds-context-bar&quot;]/one-app-nav-bar[@class=&quot;slds-grid slds-has-flexi-truncate&quot;]/nav[@class=&quot;slds-context-bar__secondary navCenter&quot;]/div[@class=&quot;slds-grid slds-has-flexi-truncate navUL&quot;]/one-app-nav-bar-item-root[@class=&quot;navItem slds-context-bar__item slds-shrink-none&quot;]/a[@class=&quot;slds-context-bar__label-action dndItem&quot;]</value>
+      <webElementGuid>15b77e76-0013-43c2-9806-ad54599da2ff</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Home'])[1]/following::a[1]</value>
+      <webElementGuid>8d62e247-d677-40e5-ba64-ab78575b7699</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Press Spacebar to reorder.'])[1]/following::a[2]</value>
+      <webElementGuid>e03b68a4-8e45-41a7-951f-2cf7f0bdcdc2</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Forecasts'])[1]/preceding::a[1]</value>
+      <webElementGuid>0876c468-b8c4-4813-812f-a90a0a527944</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, '/lightning/n/X2023_Global_Forecast')]</value>
+      <webElementGuid>ae1f727f-76de-4ccc-ba8e-2ae5a1310d5b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//one-app-nav-bar-item-root[2]/a</value>
+      <webElementGuid>fc91c38f-6a69-4200-a6b2-8afdba6c85ea</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = '/lightning/n/X2023_Global_Forecast' and @title = 'Fy23 Global Forecast' and (text() = 'Fy23 Global Forecast' or . = 'Fy23 Global Forecast')]</value>
+      <webElementGuid>4c512394-d417-43c3-afe8-51a9dc532615</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

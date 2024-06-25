@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Recurly Transactions</name>
+   <tag></tag>
+   <elementGuidId>c0ef3ab8-511a-4cb6-b591-77e695090670</elementGuidId>
+   <imagePath></imagePath>
+   <selectorCollection>
+      <entry>
+         <key>IMAGE</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='Recurly Accounts'])[2]/following::a[1]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@href = '/lightning/o/recurly_v2__Recurly_Transaction__c/home' and (text() = 'Recurly Transactions' or . = 'Recurly Transactions')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:role=menuitem[name=&quot;Recurly Transactions&quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>d401546b-c9a9-4683-809a-13e78f212acd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>/lightning/o/recurly_v2__Recurly_Transaction__c/home</value>
+      <webElementGuid>6768cefc-c3c3-43fb-a76c-2e381914d732</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>role</name>
+      <type>Main</type>
+      <value>menuitem</value>
+      <webElementGuid>ae0e6873-f9f5-475f-8910-a1150733c036</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tabindex</name>
+      <type>Main</type>
+      <value>-1</value>
+      <webElementGuid>079e5c19-2468-4dc9-b210-bb69dc30984a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>draggable</name>
+      <type>Main</type>
+      <value>false</value>
+      <webElementGuid>7ed29c35-19c3-4ba6-93ff-6c5b61562a30</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Recurly Transactions</value>
+      <webElementGuid>3c583bbd-aced-434c-ae87-7be625c62433</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[@class=&quot;desktop slds-wcag&quot;]/div[@class=&quot;desktop container forceStyle oneOne navexDesktopLayoutContainer lafAppLayoutHost forceAccess tablet&quot;]/div[@class=&quot;viewport&quot;]/section[@class=&quot;layoutContent stage panelSlide hasFixedFooter&quot;]/div[@class=&quot;none navexStandardManager&quot;]/div[@class=&quot;slds-no-print oneAppNavContainer&quot;]/one-appnav[1]/div[@class=&quot;slds-context-bar&quot;]/one-app-nav-bar[@class=&quot;slds-grid slds-has-flexi-truncate&quot;]/nav[@class=&quot;slds-context-bar__secondary navCenter&quot;]/div[@class=&quot;slds-grid slds-has-flexi-truncate navUL&quot;]/div[@class=&quot;more-item slds-context-bar__item slds-context-bar__dropdown-trigger slds-shrink-none&quot;]/one-app-nav-bar-menu-button[@class=&quot;slds-grid slds-grid_vertical-stretch more-button slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open&quot;]/div[@class=&quot;slds-dropdown slds-dropdown--length-with-icon-10 slds-dropdown--right&quot;]/slot[1]/one-app-nav-bar-menu-item[@class=&quot;overflowNavItem slds-dropdown__item&quot;]/a[1]</value>
+      <webElementGuid>af2852fa-dc7c-48f9-ad20-b5c2edfcecbd</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Recurly Accounts'])[2]/following::a[1]</value>
+      <webElementGuid>ed5256b8-a944-4548-bfc7-4fdd81798541</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Show more navigation items'])[1]/following::a[2]</value>
+      <webElementGuid>6e08267c-b913-437e-95d8-ec0c131137f4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='DealHub Subscriptions'])[2]/preceding::a[1]</value>
+      <webElementGuid>0f57cbe9-d0ee-443d-bf66-c5ca660fd85b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>(//a[contains(@href, '/lightning/o/recurly_v2__Recurly_Transaction__c/home')])[2]</value>
+      <webElementGuid>17f47490-3023-4ff4-918a-95e12c027a13</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//one-app-nav-bar-menu-item[2]/a</value>
+      <webElementGuid>778b4d43-8517-4c70-b695-673fbb18a51d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = '/lightning/o/recurly_v2__Recurly_Transaction__c/home' and (text() = 'Recurly Transactions' or . = 'Recurly Transactions')]</value>
+      <webElementGuid>be54bb86-54d9-4607-9661-9ace08dfca8c</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

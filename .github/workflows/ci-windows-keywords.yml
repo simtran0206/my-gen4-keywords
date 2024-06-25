@@ -1,0 +1,121 @@
+name: Run Windows keywords
+on: 
+  push:
+    branches:
+    - develop
+
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version'
+        required: true
+        default: '9.6.0'
+        type: string
+      
+jobs:
+  
+  manual-trigger-window:
+    name: Run Windows keywords on Windows by manual trigger
+    
+    if: ${{ github.event_name == 'workflow_dispatch'}}
+    runs-on: 'windows-latest'
+    
+    env:
+      version: ${{ github.event.inputs.version }}
+    
+    steps:
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        java-version: 21
+        distribution: 'zulu'
+
+    - name: Download Gradle
+      uses: suisei-cn/actions-download-file@v1.3.0
+      with:
+        url: "https://gradle.org/next-steps/?version=8.8&format=all"
+        target: C:/Users/public/gradle
+
+    - name: Unzip and setup Gradle
+      run: |
+        Expand-Archive -LiteralPath "C:/Users/public/gradle/gradle-8.8-all.zip" -DestinationPath "C:/Gradle"
+        rm "C:/Users/public/gradle/gradle-8.8-all.zip"
+      env:
+        GRADLE_HOME: C:\Gradle\gradle-8.8\bin
+
+    - name: Checkout Keywords repository
+      uses: actions/checkout@v4
+
+    - name: Install Katalon Gradle dependencies
+      run: | 
+        cd ${{github.workspace}}/qe-gen4-keywords
+        gradle katalonCopyDependencies
+    
+    - name: Change Screen Resolution
+      shell: pwsh
+      run: |
+        Set-DisplayResolution -Width 1920 -Height 1080 -Force
+
+    - name: Parse WinAppDriver version
+      id: winappdriver
+      run: |
+        if [[ $(arch) == "x86_64" ]]; then
+          $version=x64
+          echo "version=$version" >> $env:GITHUB_OUTPUT
+        elif [[ $(arch) == "arm64" ]]; then
+          $version=arm64
+          echo "version=$version" >> $env:GITHUB_OUTPUT
+        else
+          $version=x86
+          echo "version=$version" >> $env:GITHUB_OUTPUT
+        fi
+
+    - name: Download WinAppDriver
+      uses: suisei-cn/actions-download-file@v1.3.0
+      with:
+        url: "https://github.com/microsoft/WinAppDriver/releases/download/v1.2.99/WindowsApplicationDriver-1.2.99-win-${{steps.winappdriver.outputs.version}}.exe"
+        target: C:/Users/public
+
+    - name: Install WinAppDriver
+      run: |
+        if (Test-Path "C:\Program Files (x86)\Windows Application Driver\WinAppDriver.exe") {
+          echo "WinAppDriver already installed"
+        } else {
+          PowerShell -ExecutionPolicy Bypass -NoProfile -File C:/Users/public/WindowsApplicationDriver-1.2.99-win-${{steps.winappdrivers.outputs.version}}.exe
+        }
+
+    - name: Download sample app test(KSE)
+      uses: suisei-cn/actions-download-file@v1.3.0
+      with:
+        url: "https://download.katalon.com/9.6.0/Katalon_Studio_Windows_64-9.6.0.zip"
+        target: C:/Users/public
+    
+    - name: Unzip the sample app test (KSE)
+      run: |
+        Expand-Archive -LiteralPath "C:/Users/public/Katalon_Studio_Windows_64-9.6.0.zip" -DestinationPath "C:/Users/public/katalon"
+        rm "C:/Users/public/Katalon_Studio_Windows_64-9.6.0.zip"
+
+    - name: Start WinAppDriver
+      run: |
+        Start-Process -FilePath "C:\Program Files (x86)\Windows Application Driver\WinAppDriver.exe" &
+
+    - name: Parse KRE version
+      id: kre
+      run: |
+        $inputVesrion = "${{ github.event.inputs.version }}"
+        $versionArray =$inputVesrion.Split("-")
+        $version = $versionArray[0]
+        echo "version=$version" >> $env:GITHUB_OUTPUT
+    
+    - name: Download KRE and unzip
+      run: |
+        $ErrorActionPreference = 'Stop'
+        $downloadUrl = "https://download.katalon.com/${{ github.event.inputs.version }}/Katalon_Studio_Engine_Windows_64-${{ steps.kre.outputs.version }}.zip"  
+        Invoke-WebRequest $downloadUrl -OutFile  "kre.zip"
+        unzip kre.zip
+
+    - name: Running Windows keywords test script
+      shell: cmd
+      run: |
+        
+        C:/Users/public/katalon/Katalon_Studio_Engine_Windows_64-${{steps.kre.outputs.version }}/katalonc.exe -noSplash -runMode=console -projectPath="${{github.workspace}}" -retry=0 -testSuitePath="Test Suites/Windows Keywords Test" -browserType="Windows" -executionProfile="windows profile" -apiKey="4b2accba-07f7-425d-a371-8a864400fb8d" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true -webui.autoUpdateDrivers=true

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AC-FA0651019 Set encrypted text</name>
+   <tag>fast-test, api, p2, windows-keywords</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ae31116c-e77c-4cfa-8a8b-020f2373cefd</testCaseGuid>
+</TestCaseEntity>

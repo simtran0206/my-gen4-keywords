@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>h2_New Case</name>
+   <tag></tag>
+   <elementGuidId>0487d39d-5f54-4ee0-abc8-6223db4009d4</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>h2.inlineTitle.slds-p-top--large.slds-p-horizontal--medium.slds-p-bottom--medium.slds-text-heading--medium</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='content_2059:0']/div/div/div/div/h2</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:role=heading[name=&quot;New Case&quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>true</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>h2</value>
+      <webElementGuid>fc3c6f8f-4ec0-4ee9-9a96-0d3f26493619</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>inlineTitle slds-p-top--large slds-p-horizontal--medium slds-p-bottom--medium slds-text-heading--medium</value>
+      <webElementGuid>c3ece517-d872-4537-9484-d5f1c7da99e4</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-aura-rendered-by</name>
+      <type>Main</type>
+      <value>2110:0</value>
+      <webElementGuid>876b24b4-b4a9-4173-84eb-973187dd09eb</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>New Case</value>
+      <webElementGuid>be259392-83ca-43c8-9c92-4c515850e657</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;content_2059:0&quot;)/div[@class=&quot;windowViewMode-normal oneRecordActionWrapper isModal active lafPageHost&quot;]/div[@class=&quot;isModal inlinePanel oneRecordActionWrapper&quot;]/div[@class=&quot;actionBody&quot;]/div[@class=&quot;forceChangeRecordType&quot;]/h2[@class=&quot;inlineTitle slds-p-top--large slds-p-horizontal--medium slds-p-bottom--medium slds-text-heading--medium&quot;]</value>
+      <webElementGuid>8bd364de-e89f-4a98-b1b3-67f8058be847</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='content_2059:0']/div/div/div/div/h2</value>
+      <webElementGuid>b510f87f-ab58-443c-aa0e-c4e4370c725d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Close this window'])[1]/following::h2[1]</value>
+      <webElementGuid>a76084d4-e382-44fa-ae13-ef09f237e462</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='History'])[2]/following::h2[1]</value>
+      <webElementGuid>6dac97a4-ee5a-4d0f-8f71-70ba27d424b6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Select a record type'])[1]/preceding::h2[1]</value>
+      <webElementGuid>2443f8c9-5b28-4a8b-8c67-8eafed876915</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Standard'])[1]/preceding::h2[1]</value>
+      <webElementGuid>13ba703c-9275-4472-9120-82eac8b968cc</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='New Case']/parent::*</value>
+      <webElementGuid>c57df22e-80ed-4f13-8d30-49b727d1fe35</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/div/div/div/h2</value>
+      <webElementGuid>e772e146-eb86-4962-82d5-c3f2bd82c50a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//h2[(text() = 'New Case' or . = 'New Case')]</value>
+      <webElementGuid>69b33d34-be85-4131-a15f-89ae5a26fdef</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

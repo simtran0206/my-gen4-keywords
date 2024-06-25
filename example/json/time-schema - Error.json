@@ -1,0 +1,68 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome",asd ád
+    "definitions": {
+        "Welcome": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "year": {
+                    "type": "integer"
+                },
+                "month": {
+                    "type": "integer"
+                },
+                "day": {
+                    "type": "integer"
+                },
+                "hour": {
+                    "type": "integer"
+                },
+                "minute": {
+                    "type": "integer"
+                },
+                "seconds": {
+                    "type": "integer"
+                },
+                "milliSeconds": {
+                    "type": "integer"
+                },
+                "dateTime": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "date": {
+                    "type": "string"
+                },
+                "time": {
+                    "type": "string"
+                },
+                "timeZone": {
+                    "type": "string"
+                },
+                "dayOfWeek": {
+                    "type": "string"
+                },
+                "dstActive": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "date",
+                "dateTime",
+                "day",
+                "dayOfWeek",
+                "dstActive",
+                "hour",
+                "milliSeconds",
+                "minute",
+                "month",
+                "seconds",
+                "time",
+                "timeZone",
+                "year"
+            ],
+            "title": "Welcome"
+        }
+    }
+}

@@ -1,0 +1,197 @@
+name: Run Keywords in Docker Image
+on:
+
+  push:
+    branches: [ implement-docker-pipeline ]
+  # pull_request:
+  #   branches: [ develop ]
+  
+  workflow_dispatch:
+    inputs:
+      runon:
+        description: 'run on machine'
+        required: true
+        default: 'ubuntu-latest'
+        type: choice
+        options:
+          - macos-latest
+          - ubuntu-latest
+      testsuite:
+        description: 'Test suite or test suite collection'
+        required: true
+        default: TS-Keywords Sanity Check
+        type: choice
+        options:
+          - TS-Keywords Sanity Check
+          - TS-WebUI Keywords Test
+          - TS-Cucumber Keywords Test
+          - TS-Web Service Keywords Test
+          - TS-WebUI Keywords Test - docker
+          - TSC-Keywords Sanity Check
+          - TSC-WebUI - 3 Parallels
+          - TSC-WebUI - 6 TS - 3 Parallels
+          - TSC-Docker - 5 TS - 5 Parallels
+      testSuiteCollection:
+        description: 'Run TS Collection'
+        required: false
+        type: boolean
+      autoUpdateDriver:
+        description: 'autoUpdateDriver'
+        required: true
+        type: boolean
+      chrome:
+        description: 'Chrome'
+        required: true
+        type: boolean
+      edgeChromium:
+        description: 'Edge Chromium'
+        required: true
+        type: boolean
+      firefox:
+        description: 'Firefox'
+        required: true
+        type: boolean
+      chromeHeadless:
+        description: 'Chrome (headless)'
+        required: true
+        type: boolean
+      firefoxHeadless:
+        description: 'Firefox (headless)'
+        required: true
+        type: boolean
+      dockerTag:
+        description: 'docker tag'
+        required: false
+        default: 9.1.0
+        type: string
+env:
+  tagName: 9.1.0
+jobs:
+  Run-docker-from-mac:
+    if: ${{ github.event_name != 'workflow_dispatch' }}
+    name: run docker from mac
+    runs-on: macos-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Install docker
+      run: |
+        brew install docker
+        colima start
+        
+    - name: Docker pull
+      run: |
+        docker image pull katalonstudio/katalon:${{ env.tagName }}
+        ls -al
+
+    - name: Katalon Run Edge chromium
+      run:  'docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon:${{ env.tagName }} katalonc.sh -projectPath=/tmp/project -noSplash -testSuitePath="Test Suites/${{vars.DOCKER_TEST_SUITE}}" -apiKey=${{ secrets.API_KEY }} -browserType="Edge Chromium" '
+    - name: Katalon Run Chrome
+      run:  'docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon:${{ env.tagName }} katalonc.sh -projectPath=/tmp/project -noSplash -testSuitePath="Test Suites/${{vars.DOCKER_TEST_SUITE}}" -apiKey=${{ secrets.API_KEY }} -browserType="Chrome" --config -webui.autoUpdateDrivers=true'
+    - name: Katalon Run Firefox
+      run:  'docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon:${{ env.tagName }} katalonc.sh -projectPath=/tmp/project -noSplash -testSuitePath="Test Suites/${{vars.DOCKER_TEST_SUITE}}" -apiKey=${{ secrets.API_KEY }} -browserType="Firefox" --config -webui.autoUpdateDrivers=true'
+    - name: Katalon Run Firefox (headless)
+      run:  'docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon:${{ env.tagName }} katalonc.sh -projectPath=/tmp/project -noSplash -testSuitePath="Test Suites/${{vars.DOCKER_TEST_SUITE}}" -apiKey=${{ secrets.API_KEY }} -browserType="Firefox (headless)" --config -webui.autoUpdateDrivers=true'
+    - name: Katalon Run Chrome (headless)
+      run:  'docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon:${{ env.tagName }} katalonc.sh -projectPath=/tmp/project -noSplash -testSuitePath="Test Suites/${{vars.DOCKER_TEST_SUITE}}" -apiKey=${{ secrets.API_KEY }} -browserType="Chrome (headless)" --config -webui.autoUpdateDrivers=true'
+      
+  Run-docker-from-mac-by-manual:
+    if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.runon =='macos-latest' }}
+    name: run docker from mac
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install docker
+        run: |
+          brew install docker
+          colima start
+            
+      - name: Docker pull
+        run: |
+          docker image pull katalonstudio/katalon:${{ github.event.inputs.dockerTag }}
+          ls -al
+    
+      - name: Katalon Run Edge chromium
+        if: ${{ github.event.inputs.edgeChromium }} 
+        run:  'docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon:${{ github.event.inputs.dockerTag }} katalonc.sh -projectPath=/tmp/project -noSplash -testSuitePath="Test Suites/${{ github.event.inputs.testsuite }}" -apiKey=${{ secrets.API_KEY }} -browserType="Edge Chromium" '
+      - name: Katalon Run Chrome
+        if: ${{ github.event.inputs.chrome }}
+        run:  'docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon:${{ github.event.inputs.dockerTag }} katalonc.sh -projectPath=/tmp/project -noSplash -testSuitePath="Test Suites/${{ github.event.inputs.testsuite }}" -apiKey=${{ secrets.API_KEY }} -browserType="Chrome" --config -webui.autoUpdateDrivers=true'
+      - name: Katalon Run Firefox
+        if: ${{ github.event.inputs.firefox }}
+        run:  'docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon:${{ github.event.inputs.dockerTag }} katalonc.sh -projectPath=/tmp/project -noSplash -testSuitePath="Test Suites/${{ github.event.inputs.testsuite }}" -apiKey=${{ secrets.API_KEY }} -browserType="Firefox" --config -webui.autoUpdateDrivers=true'
+      - name: Katalon Run Firefox (headless)
+        if: ${{ github.event.inputs.chromeHeadless}}
+        run:  'docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon:${{ github.event.inputs.dockerTag }} katalonc.sh -projectPath=/tmp/project -noSplash -testSuitePath="Test Suites/${{ github.event.inputs.testsuite }}" -apiKey=${{ secrets.API_KEY }} -browserType="Firefox (headless)" --config -webui.autoUpdateDrivers=true'
+      - name: Katalon Run Chrome (headless)
+        if: ${{ github.event.inputs.firefoxHeadless }}
+        run:  'docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon:${{ github.event.inputs.dockerTag }} katalonc.sh -projectPath=/tmp/project -noSplash -testSuitePath="Test Suites/${{ github.event.inputs.testsuite }}" -apiKey=${{ secrets.API_KEY }} -browserType="Chrome (headless)" --config -webui.autoUpdateDrivers=true'
+    
+  Run-docker-from-ubuntu-by-manual:
+    if: ${{ !inputs.testSuiteCollection}}
+    name: run docker from ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+            
+      - name: Docker pull
+        run: |
+          docker image pull katalonstudio/katalon:${{ github.event.inputs.dockerTag }}
+    
+      - name: Katalon Run Edge chromium
+        if: ${{inputs.edgeChromium }} 
+        run:  'docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon:${{ github.event.inputs.dockerTag }} katalonc.sh -projectPath=/tmp/project -noSplash -testSuitePath="Test Suites/${{ github.event.inputs.testsuite }}" -apiKey=${{ secrets.API_KEY }} -orgID=${{ secrets.ORG_ID }} -browserType="Edge Chromium" --config -webui.autoUpdateDrivers=${{ github.event.inputs.autoUpdateDriver }}'
+      - name: Katalon Run Chrome
+        if: ${{inputs.chrome }}
+        run:  'docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon:${{ github.event.inputs.dockerTag }} katalonc.sh -projectPath=/tmp/project -noSplash -testSuitePath="Test Suites/${{ github.event.inputs.testsuite }}" -apiKey=${{ secrets.API_KEY }} -orgID=${{ secrets.ORG_ID }} -browserType="Chrome" --config -webui.autoUpdateDrivers=${{ github.event.inputs.autoUpdateDriver }}'
+      - name: Katalon Run Firefox
+        if: ${{inputs.firefox }}
+        run:  'docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon:${{ github.event.inputs.dockerTag }} katalonc.sh -projectPath=/tmp/project -noSplash -testSuitePath="Test Suites/${{ github.event.inputs.testsuite }}" -apiKey=${{ secrets.API_KEY }} -orgID=${{ secrets.ORG_ID }} -browserType="Firefox" --config -webui.autoUpdateDrivers=${{ github.event.inputs.autoUpdateDriver }}'
+      - name: Katalon Run Firefox (headless)
+        if: ${{inputs.chromeHeadless }}
+        run:  'docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon:${{ github.event.inputs.dockerTag }} katalonc.sh -projectPath=/tmp/project -noSplash -testSuitePath="Test Suites/${{ github.event.inputs.testsuite }}" -apiKey=${{ secrets.API_KEY }} -orgID=${{ secrets.ORG_ID }} -browserType="Firefox (headless)" --config -webui.autoUpdateDrivers=${{ github.event.inputs.autoUpdateDriver }}'
+      - name: Katalon Run Chrome (headless)
+        if: ${{ inputs.firefoxHeadless }}
+        run:  'docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon:${{ github.event.inputs.dockerTag }} katalonc.sh -projectPath=/tmp/project -noSplash -testSuitePath="Test Suites/${{ github.event.inputs.testsuite }}" -apiKey=${{ secrets.API_KEY }} -orgID=${{ secrets.ORG_ID }} -browserType="Chrome (headless)" --config -webui.autoUpdateDrivers=${{ github.event.inputs.autoUpdateDriver }}'
+      - name: Katalon Run with old command
+        if: ${{ inputs.chrome }}
+        run: 'docker run -t --rm -v "$(pwd)":/katalon/katalon/source katalonstudio/katalon:${{ github.event.inputs.dockerTag }} katalon-execute.sh -statusDelay=15 -retry=0 -testSuitePath="Test Suites/${{ github.event.inputs.testsuite }}" -browserType="Chrome" -apiKey=${{ secrets.API_KEY }} -orgID=${{ secrets.ORG_ID }} --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true -webui.autoUpdateDrivers=${{ github.event.inputs.autoUpdateDriver }}'
+
+  Run-docker-from-ubuntu:
+    if: ${{ github.event_name != 'workflow_dispatch' }}
+    name: run docker from ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+  
+      - name: Docker pull
+        run: |
+          docker image pull katalonstudio/katalon:${{ env.tagName }}
+    
+      - name: Katalon Run Edge Chromium
+        run:  'docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon:${{ env.tagName }} katalonc.sh -projectPath=/tmp/project -noSplash -testSuitePath="Test Suites/${{vars.DOCKER_TEST_SUITE}}" -apiKey=${{ secrets.API_KEY }} -orgID=${{ secrets.ORG_ID }} -browserType="Edge Chromium" --config -webui.autoUpdateDrivers=true'
+      - name: Katalon Run Chrome
+        run:  'docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon:${{ env.tagName }} katalonc.sh -projectPath=/tmp/project -noSplash -testSuitePath="Test Suites/${{vars.DOCKER_TEST_SUITE}}" -apiKey=${{ secrets.API_KEY }} -orgID=${{ secrets.ORG_ID }} -browserType="Chrome"'
+      - name: Katalon Run Firefox
+        run:  'docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon:${{ env.tagName }} katalonc.sh -projectPath=/tmp/project -noSplash -testSuitePath="Test Suites/${{vars.DOCKER_TEST_SUITE}}" -apiKey=${{ secrets.API_KEY }} -orgID=${{ secrets.ORG_ID }} -browserType="Firefox" --config -webui.autoUpdateDrivers=true'
+      - name: Katalon Run Firefox (headless)
+        run:  'docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon:${{ env.tagName }} katalonc.sh -projectPath=/tmp/project -noSplash -testSuitePath="Test Suites/${{vars.DOCKER_TEST_SUITE}}" -apiKey=${{ secrets.API_KEY }} -orgID=${{ secrets.ORG_ID }} -browserType="Firefox (headless)" --config -webui.autoUpdateDrivers=true'
+      - name: Katalon Run Chrome (headless)
+        run:  'docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon:${{ env.tagName }} katalonc.sh -projectPath=/tmp/project -noSplash -testSuitePath="Test Suites/${{vars.DOCKER_TEST_SUITE}}" -apiKey=${{ secrets.API_KEY }} -orgID=${{ secrets.ORG_ID }} -browserType="Chrome (headless)" --config -webui.autoUpdateDrivers=true'
+  Run-TS-Collection-docker-from-ubuntu:
+    if: ${{inputs.testSuiteCollection}}
+    name: run TSC in docker from ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+  
+      - name: Docker pull
+        run: |
+          docker image pull katalonstudio/katalon:${{ env.tagName }}
+
+      - name: Katalon Run TSC
+        run:  'docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon:${{ github.event.inputs.dockerTag }} katalonc.sh -projectPath=/tmp/project -noSplash -testSuiteCollectionPath="Test Suites/${{ github.event.inputs.testsuite }}" -apiKey=${{ secrets.API_KEY }} -orgID=${{ secrets.ORG_ID }} --config -webui.autoUpdateDrivers=${{ github.event.inputs.autoUpdateDriver }}'

@@ -1,0 +1,14 @@
+version: 2.1
+orbs:
+    katalon-studio: katalon/katalon-studio@23.0.11
+    
+workflows:
+  build:
+    jobs:
+        - katalon-studio/run:
+                version: "latest"
+                command_arguments: '-browserType="Chrome" -retry=2 -testSuitePath="Test Suites/sampleTest" --config -webui.autoUpdateDrivers=true'
+        - katalon-studio/run:
+                version: "latest"
+                command_arguments: '-browserType="Firefox" -retry=2 -testSuitePath="Test Suites/sampleTest"'
+

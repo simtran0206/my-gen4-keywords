@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_Recurly Account asdhklasd was created</name>
+   <tag></tag>
+   <elementGuidId>f7272e2d-3455-4396-ace4-f39f64362d09</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>span.toastMessage.slds-text-heading--small.forceActionsText</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='toastDescription2206:0']/span</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:text=&quot;Recurly Account \&quot;asdhklasd\&quot; was created.&quot;i</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>true</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>d0015a13-9a40-4370-bf60-1ca0629254de</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>toastMessage slds-text-heading--small forceActionsText</value>
+      <webElementGuid>6702abab-32d3-4986-9696-b18b70e4d4ea</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-aura-rendered-by</name>
+      <type>Main</type>
+      <value>2219:0</value>
+      <webElementGuid>0ad52d6c-11a2-49a3-a434-7832d35149ec</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-aura-class</name>
+      <type>Main</type>
+      <value>forceActionsText</value>
+      <webElementGuid>e117c541-46f4-4c55-b406-5dad5808b421</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Recurly Account &quot;asdhklasd&quot; was created.</value>
+      <webElementGuid>7475bb45-e02f-408d-a75f-b2502987ac01</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;toastDescription2206:0&quot;)/span[@class=&quot;toastMessage slds-text-heading--small forceActionsText&quot;]</value>
+      <webElementGuid>610ccf1f-7411-451c-a684-1727943ae156</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='toastDescription2206:0']/span</value>
+      <webElementGuid>4966d307-ee4e-4b7b-93f1-08ac2cbea767</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Success'])[1]/following::span[1]</value>
+      <webElementGuid>3ecb4492-3f5b-4255-a5c2-7684448da844</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Loading...'])[4]/following::span[4]</value>
+      <webElementGuid>7d6b8cc8-f194-44e9-9f37-78698c4f1e16</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Close'])[1]/preceding::span[1]</value>
+      <webElementGuid>aac963c1-9921-47a7-a801-10adaf6433fe</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[6]/div/div/div/div/div/div/span</value>
+      <webElementGuid>520445df-0563-4a76-a514-2782bf01cb7e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//span[(text() = 'Recurly Account &quot;asdhklasd&quot; was created.' or . = 'Recurly Account &quot;asdhklasd&quot; was created.')]</value>
+      <webElementGuid>af91a24a-04c9-46b5-8a4f-04c256d19afd</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

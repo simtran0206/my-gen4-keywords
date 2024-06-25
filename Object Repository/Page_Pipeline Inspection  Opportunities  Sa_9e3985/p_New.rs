@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>p_New</name>
+   <tag></tag>
+   <elementGuidId>6376e26d-07b8-4587-bee6-ddadf1085c8e</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='brandBand_2']/div/div/div[3]/div/div/div/div[2]/runtime_pipeline_inspector-kpi-panel/div/div[2]/button/div/div/p</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.slds-p-vertical_small.slds-p-horizontal_small.slds-m-vertical_none.slds-text-color_inverse.slds-text-heading_xsmall.slds-theme_inverse.kpiElementDiv.inactive > div.slds-grid > p.slds-text-align--left.slds-text-body_small.kpiName.flexItem</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:role=button[name=&quot;New&quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>true</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>p</value>
+      <webElementGuid>58ef2073-ac3e-44cb-9347-096b3f45f2b0</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>slds-text-align--left slds-text-body_small kpiName flexItem</value>
+      <webElementGuid>ed2614f6-047e-4949-b2f1-28234379a678</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>New</value>
+      <webElementGuid>d0656406-7864-49c2-84e1-0ae295047222</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;brandBand_2&quot;)/div[@class=&quot;slds-template__container&quot;]/div[@class=&quot;center oneCenterStage lafSinglePaneWindowManager&quot;]/div[@class=&quot;windowViewMode-normal oneContent active lafPageHost&quot;]/div[@class=&quot;container slds-grid slds-grid_vertical runtime_pipeline_inspectorPipelineInspectorHome&quot;]/div[@class=&quot;mainContainer slds-is-relative slds-col slds-grid&quot;]/div[@class=&quot;mainContainerChild slds-col slds-grid slds-grid_vertical&quot;]/div[@class=&quot;slds-theme_inverse mainContainerHeader&quot;]/runtime_pipeline_inspector-kpi-panel[@class=&quot;runtime_pipeline_inspectorKpiPanelWrapper&quot;]/div[@class=&quot;slds-theme_inverse slds-grid blueBottomBorder kpiElementsWrapper&quot;]/div[@class=&quot;slds-is-relative kpiButtonContainer&quot;]/button[@class=&quot;slds-p-around_none slds-m-horizontal--x-small slds-m-vertical--none kpiButton&quot;]/div[@class=&quot;slds-p-vertical_small slds-p-horizontal_small slds-m-vertical_none slds-text-color_inverse slds-text-heading_xsmall slds-theme_inverse kpiElementDiv inactive&quot;]/div[@class=&quot;slds-grid&quot;]/p[@class=&quot;slds-text-align--left slds-text-body_small kpiName flexItem&quot;]</value>
+      <webElementGuid>676b8587-c27c-4437-b0a1-2b1f2d1de9ab</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='brandBand_2']/div/div/div[3]/div/div/div/div[2]/runtime_pipeline_inspector-kpi-panel/div/div[2]/button/div/div/p</value>
+      <webElementGuid>9b7019cb-fceb-4427-87c8-c61ee473daba</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='a few seconds ago'])[1]/following::p[3]</value>
+      <webElementGuid>a0b870a0-3aee-4928-a210-0de5d2fb9661</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Help'])[1]/preceding::p[8]</value>
+      <webElementGuid>ec44cfcc-0b0e-4bc3-89b7-17f2117f8c2c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Help'])[2]/preceding::p[10]</value>
+      <webElementGuid>75a2220f-0c1e-4635-bc35-f2a56b39a92d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/button/div/div/p</value>
+      <webElementGuid>bb5563e0-4fb7-4b7c-811f-001759f192b9</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//p[(text() = 'New' or . = 'New')]</value>
+      <webElementGuid>a03c69cd-8ca8-4b29-9418-10ab19088cb6</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome",
+    "definitions": {
+        "Welcome": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "year": {
+                    "type": "string"
+                },
+                "month": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "month",
+                "year"
+            ],
+            "title": "Welcome"
+        }
+    }
+}

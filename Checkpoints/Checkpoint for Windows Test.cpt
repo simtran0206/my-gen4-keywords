@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkpoint>
+   <description></description>
+   <name>Checkpoint for Windows Test</name>
+   <tag></tag>
+   <source-info>
+      <is-from-test-data>true</is-from-test-data>
+      <source-url>Data Files/Windows Test</source-url>
+   </source-info>
+   <taken-date>2024-06-19T18:00:28.963+07:00</taken-date>
+   <column-names>
+      <column-name>input</column-name>
+   </column-names>
+   <checkpoint-data><![CDATA[[
+  [
+    {
+      "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "checked": false
+    }
+  ]
+]]]></checkpoint-data>
+</checkpoint>

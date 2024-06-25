@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AC-FA0043075 navigate to marked url</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ea1a0497-46b8-44fb-b128-d956dbd44f66</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>04f30c8c-7fe8-4577-8b5e-122dd789139c</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'wrongURL'</defaultValue>
+      <description></description>
+      <id>04f30c8c-7fe8-4577-8b5e-122dd789139c</id>
+      <masked>false</masked>
+      <name>wrongURL</name>
+   </variable>
+</TestCaseEntity>

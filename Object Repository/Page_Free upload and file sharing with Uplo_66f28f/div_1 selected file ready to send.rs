@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_1 selected file ready to send</name>
+   <tag></tag>
+   <elementGuidId>1281c25d-8ee8-42fc-a140-6d3ac26367e4</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='content-scrollable-page']/div/div/div/div/div[2]/div[3]/div/div</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.cards_overlay_title__SKsjB</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:text=&quot;1 selected file ready to send&quot;i</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>a4b621ec-906d-4754-a77a-7de6f4f77734</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>cards_overlay_title__SKsjB</value>
+      <webElementGuid>20016d83-440b-48e1-8ee2-54ce3b59a582</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>1 selected file ready to send</value>
+      <webElementGuid>9537bd96-3179-4bb7-b8f1-1f8cca8e903b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;content-scrollable-page&quot;)/div[@class=&quot;common_wrapper_int_home__3FKpQ&quot;]/div[@class=&quot;react-reveal&quot;]/div[@class=&quot;common_wrapper_int_uploader__J4HYE&quot;]/div[@class=&quot;common_anim_scaleIn___QKcA&quot;]/div[@class=&quot;cards_card__z97R0 cards_dnd_inactive__pewJe undefined m-0&quot;]/div[@class=&quot;cards_overlay_confirm__F3ooH common_anim_scaleIn___QKcA&quot;]/div[@class=&quot;cards_overlay_inner__wdPbe&quot;]/div[@class=&quot;cards_overlay_title__SKsjB&quot;]</value>
+      <webElementGuid>4ec872f3-1dec-42c0-9618-bfe3914f3ec0</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='content-scrollable-page']/div/div/div/div/div[2]/div[3]/div/div</value>
+      <webElementGuid>67d70d18-0db6-4560-9194-ba4fff8a50ca</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Add files'])[1]/following::div[3]</value>
+      <webElementGuid>aaa74ef7-7229-4bb5-8ae5-9d54bed8cfd1</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Type here to'])[1]/following::div[3]</value>
+      <webElementGuid>7ba76842-37d1-4fd9-86ba-473cd1ac3963</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Add more files'])[1]/preceding::div[1]</value>
+      <webElementGuid>30e5e608-7dbb-41a5-96bc-9f798eb40eec</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Validate and upload'])[1]/preceding::div[1]</value>
+      <webElementGuid>2fe0b3fb-bd5e-4c66-95ef-e6536392b907</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='1 selected file ready to send']/parent::*</value>
+      <webElementGuid>0670a51c-7599-474f-a1ef-08713f05e08d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div[3]/div/div</value>
+      <webElementGuid>deece51d-a380-4f55-8697-4314ed37cead</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = '1 selected file ready to send' or . = '1 selected file ready to send')]</value>
+      <webElementGuid>8e0bb841-f7be-44fe-8fcb-a79be8785dc1</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

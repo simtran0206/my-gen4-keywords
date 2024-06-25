@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>windows profile</name>
+   <tag></tag>
+   <defaultProfile>false</defaultProfile>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'C:\\Windows\\System32\\notepad.exe'</initValue>
+      <name>NotepadPath</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Untitled - Notepad'</initValue>
+      <name>NotepadTitle</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'C:\\Windows\\System32\\mspaint.exe'</initValue>
+      <name>PaintPath</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'D:\\Sim\\Katalon_Studio_Windows_64-9.6.0\\katalon.exe'</initValue>
+      <name>KatalonPath</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>
