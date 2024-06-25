@@ -1,0 +1,62 @@
+name: Run Windows keywords
+on: 
+  push:
+    branches:
+    - develop
+
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version'
+        required: true
+        default: '9.6.0'
+        type: string
+
+jobs:
+  
+  simple-flow:
+    runs-on: 'windows-latest'
+    steps:
+    - name: Parse WinAppDriver version
+      id: winappdriver
+      run: |
+        arch = (Get-WmiObject Win32_OperatingSystem).Caption.Trim()
+        if ( $(arch) -match "x86_64"){
+          $version="x64"
+          echo "version=$version" >> $env:GITHUB_OUTPUT
+        }
+        elseif ( $(arch) -match "arm64" ){
+          $version="arm64"
+          echo "version=$version" >> $env:GITHUB_OUTPUT
+        }
+        else {
+          $version="x86"
+          echo "version=$version" >> $env:GITHUB_OUTPUT
+        }
+
+    - name: Download WinAppDriver
+      uses: suisei-cn/actions-download-file@v1.3.0
+      id: winappdriverfile
+      with:
+        url: "https://github.com/microsoft/WinAppDriver/releases/download/v1.2.99/WindowsApplicationDriver-1.2.99-win-${{steps.winappdriver.outputs.version}}.exe"
+        target: C:/Users/public
+
+    - name: Install WinAppDriver
+      run: |
+        if (Test-Path "C:\Program Files (x86)\Windows Application Driver\WinAppDriver.exe") {
+          echo "WinAppDriver already installed"
+        } else {
+          PowerShell -ExecutionPolicy Bypass -NoProfile -File C:/Users/public/WindowsApplicationDriver-1.2.99-win-${{steps.winappdriver.outputs.version}}.exe
+        }
+    - name: Start WinAppDriver
+      run: |
+        Start-Process -FilePath "C:\Program Files (x86)\Windows Application Driver\WinAppDriver.exe" &
+
+    - name: Check for WinAppDriver process
+      run: |
+        processes = (Get-Process WinAppDriver* | Select-Object -ExpandProperty Name).Trim()
+        if ($processes) {
+            echo "WinAppDriver process found: $processes"
+        } else {
+            echo "WinAppDriver process not found"
+        }
