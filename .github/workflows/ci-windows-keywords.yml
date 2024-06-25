@@ -49,6 +49,7 @@ jobs:
 
     - name: Install Katalon Gradle dependencies
       run: | 
+        cd ${{github.workspace}}
         gradle katalonCopyDependencies
     
     - name: Change Screen Resolution
@@ -59,10 +60,10 @@ jobs:
     - name: Parse WinAppDriver version
       id: winappdriver
       run: |
-        if [[ $(arch) == "x86_64" ]]; then
+        if [ $(arch) == "x86_64" ]; then
           $version=x64
           echo "version=$version" >> $env:GITHUB_OUTPUT
-        elif [[ $(arch) == "arm64" ]]; then
+        elif [ $(arch) == "arm64" ]; then
           $version=arm64
           echo "version=$version" >> $env:GITHUB_OUTPUT
         else
