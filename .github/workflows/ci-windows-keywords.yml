@@ -60,15 +60,19 @@ jobs:
     - name: Parse WinAppDriver version
       id: winappdriver
       run: |
-        if [ $(arch) == "x86_64" ]; then
+        arch = (WMIC OS GET Caption | FindStr /v /C:"caption" | Select-Object -ExpandProperty Caption).Trim()
+        if ( $(arch) -match "x86_64"){
           $version=x64
           echo "version=$version" >> $env:GITHUB_OUTPUT
-        elif [ $(arch) == "arm64" ]; then
+        }
+        elif ( $(arch) -match "arm64" ){
           $version=arm64
           echo "version=$version" >> $env:GITHUB_OUTPUT
-        else
+        }
+        else {
           $version=x86
           echo "version=$version" >> $env:GITHUB_OUTPUT
+        }
         fi
 
     - name: Download WinAppDriver
