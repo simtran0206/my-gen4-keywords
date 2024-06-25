@@ -73,7 +73,6 @@ jobs:
           $version="x86"
           echo "version=$version" >> $env:GITHUB_OUTPUT
         }
-        fi
 
     - name: Download WinAppDriver
       uses: suisei-cn/actions-download-file@v1.3.0
