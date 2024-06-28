@@ -101,10 +101,6 @@ jobs:
         Expand-Archive -LiteralPath "C:/Users/public/Katalon_Studio_Windows_64-9.6.0.zip" -DestinationPath "C:/Users/public/katalon"
         rm "C:/Users/public/Katalon_Studio_Windows_64-9.6.0.zip"
 
-    - name: Start WinAppDriver
-      run: |
-        Start-Process -FilePath "C:\Program Files (x86)\Windows Application Driver\WinAppDriver.exe" -ArgumentList "-port 4723"
-
     - name: Parse KRE version
       id: kre
       run: |
@@ -120,9 +116,18 @@ jobs:
         Invoke-WebRequest $downloadUrl -OutFile  "kre.zip"
         unzip kre.zip
 
+    - name: Start WinAppDriver
+      run: |
+        Start-Process -FilePath "C:\Program Files (x86)\Windows Application Driver\WinAppDriver.exe" -ArgumentList "-port 4723"
+
+    - name: Check for WinAppDriver process
+      run: |
+        Get-Process | Format-List Name
+      
     - name: Running Windows keywords test script
       shell: cmd
       run: |
         set projectPath=%cd%\web-keywords-automation.prj
         cd Katalon_Studio_Engine_Windows_64-${{steps.kre.outputs.version }}
         katalonc.exe -noSplash -runMode=console -projectPath="%projectPath%" -retry=0 -testSuitePath="Test Suites/Windows Keywords Test" -browserType="Windows" -executionProfile="windows profile" -apiKey="4b2accba-07f7-425d-a371-8a864400fb8d" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true -webui.autoUpdateDrivers=true
+        
