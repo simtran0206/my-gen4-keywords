@@ -117,9 +117,8 @@ jobs:
         unzip kre.zip
       
     - name: Start Win App Driver
-      shell: cmd
       run: |
-        start /B "" "C:\Program Files (x86)\Windows Application Driver\WinAppDriver.exe"
+        Start-Process -FilePath "C:\Program Files (x86)\Windows Application Driver\WinAppDriver.exe" -ArgumentList "-port 4723 -host:localhost"
     
     - name: Running Windows keywords test script
       shell: cmd
