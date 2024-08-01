@@ -97,7 +97,7 @@ jobs:
       shell: cmd
       run: |
         cd C:\Program Files (x86)\Windows Application Driver
-        start /B WinAppDriver.exe
+        start WinAppDriver.exe
 
     - name: Checkout Keywords repository
       uses: actions/checkout@v4
