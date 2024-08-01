@@ -109,17 +109,12 @@ jobs:
         $version = $versionArray[0]
         echo "version=$version" >> $env:GITHUB_OUTPUT
     
-    - name: Download KRE
-      uses: suisei-cn/actions-download-file@v1.3.0
-      id: krefile
-      with:
-        url: "https://download.katalon.com/${{ github.event.inputs.version }}/Katalon_Studio_Engine_Windows_64-${{ steps.kre.outputs.version }}.zip"
-        target: C:/Users/public
-
-    - name: Unzip KRE
+    - name: Download KRE and unzip
       run: |
-        Expand-Archive -LiteralPath "C:/Users/public/Katalon_Studio_Engine_Windows_64-${{ steps.kre.outputs.version }}.zip" -DestinationPath "C:/Users/public/kre"
-        rm "C:/Users/public/Katalon_Studio_Engine_Windows_64-${{ steps.kre.outputs.version }}.zip"
+        $ErrorActionPreference = 'Stop'
+        $downloadUrl = "https://download.katalon.com/${{ github.event.inputs.version }}/Katalon_Studio_Engine_Windows_64-${{steps.kre.outputs.version }}.zip"  
+        Invoke-WebRequest $downloadUrl -OutFile  "kre.zip"
+        unzip kre.zip
 
     - name: Start WinAppDriver
       run: |
@@ -133,7 +128,7 @@ jobs:
       shell: cmd
       run: |
         set projectPath=%cd%\web-keywords-automation.prj
-        cd C:/Users/public/kre/Katalon_Studio_Engine_Windows_64-${{steps.kre.outputs.version }}
+        cd Katalon_Studio_Engine_Windows_64-${{steps.kre.outputs.version }}
         dir
         katalonc.exe -noSplash -runMode=console -projectPath="%projectPath%" -retry=0 -testSuitePath="Test Suites/Windows Keywords Test" -browserType="Windows" -executionProfile="windows profile" -apiKey="4b2accba-07f7-425d-a371-8a864400fb8d" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true -webui.autoUpdateDrivers=true
         
