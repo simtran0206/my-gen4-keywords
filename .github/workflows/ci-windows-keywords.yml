@@ -119,7 +119,7 @@ jobs:
     - name: Start Win App Driver
       shell: cmd
       run: |
-        start /b "" "C:\Program Files (x86)\Windows Application Driver\WinAppDriver.exe" 
+        start /B "" "C:\Program Files (x86)\Windows Application Driver\WinAppDriver.exe"
     
     - name: Running Windows keywords test script
       shell: cmd
