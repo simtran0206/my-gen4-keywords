@@ -96,9 +96,8 @@ jobs:
     - name: Start WinAppDriver
       shell: cmd
       run: |
-        # Start-Process -FilePath "C:\Program Files (x86)\Windows Application Driver\WinAppDriver.exe" -ArgumentList "-port 4723"
         cd C:\Program Files (x86)\Windows Application Driver
-        WinAppDriver.exe
+        start /B WinAppDriver.exe
 
     - name: Checkout Keywords repository
       uses: actions/checkout@v4
