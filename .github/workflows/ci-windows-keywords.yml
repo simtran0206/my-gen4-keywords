@@ -96,9 +96,7 @@ jobs:
     - name: Start WinAppDriver
       shell: cmd
       run: |
-        cd C:\Program Files (x86)\Windows Application Driver
-        start /B WinAppDriver.exe
-        echo "WinAppDriver started in background"
+        Start-Process -FilePath "C:\Program Files (x86)\Windows Application Driver\WinAppDriver.exe" -ArgumentList "-port 4723"
 
     - name: Checkout Keywords repository
       uses: actions/checkout@v4
@@ -125,6 +123,7 @@ jobs:
 
     - name: Check for WinAppDriver process
       run: |
+        netstat -ano | findstr :4723
         Get-Process | Format-List Name
       
     - name: Running Windows keywords test script
