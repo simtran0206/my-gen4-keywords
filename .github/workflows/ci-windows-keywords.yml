@@ -97,7 +97,8 @@ jobs:
       shell: cmd
       run: |
         cd C:\Program Files (x86)\Windows Application Driver
-        start WinAppDriver.exe
+        start /B WinAppDriver.exe
+        echo "WinAppDriver started in background"
 
     - name: Checkout Keywords repository
       uses: actions/checkout@v4
