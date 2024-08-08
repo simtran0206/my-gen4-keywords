@@ -21,7 +21,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'D:\\Sim\\Katalon_Studio_Windows_64-9.6.0\\katalon.exe'</initValue>
+      <initValue>'/Katalon_Studio_Windows_64-9.6.0/katalon.exe'</initValue>
       <name>KatalonPath</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

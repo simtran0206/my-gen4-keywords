@@ -1,9 +1,5 @@
 name: Run Windows keywords
 on: 
-  push:
-    branches:
-    - develop
-
   workflow_dispatch:
     inputs:
       version:
@@ -14,10 +10,9 @@ on:
       
 jobs:
   
-  manual-trigger-window:
-    name: Run Windows keywords on Windows by manual trigger
-    
-    if: ${{ github.event_name == 'workflow_dispatch'}}
+  test-execution:
+    name: Run Windows keywords on Windows
+
     runs-on: 'windows-latest'
     
     env:
@@ -81,18 +76,6 @@ jobs:
           PowerShell -ExecutionPolicy Bypass -NoProfile -File C:/Users/public/WindowsApplicationDriver-1.2.99-win-${{steps.winappdriver.outputs.version}}.exe
         }
 
-    - name: Download sample app test(KSE)
-      uses: suisei-cn/actions-download-file@v1.3.0
-      id: ksefile
-      with:
-        url: "https://download.katalon.com/9.6.0/Katalon_Studio_Windows_64-9.6.0.zip"
-        target: C:/Users/public
-    
-    - name: Unzip the sample app test (KSE)
-      run: |
-        Expand-Archive -LiteralPath "C:/Users/public/Katalon_Studio_Windows_64-9.6.0.zip" -DestinationPath "C:/Users/public/kse"
-        rm "C:/Users/public/Katalon_Studio_Windows_64-9.6.0.zip"
-
     - name: Checkout Keywords repository
       uses: actions/checkout@v4
   
@@ -100,7 +83,14 @@ jobs:
       run: | 
         cd ${{github.workspace}}
         gradle katalonCopyDependencies
-    
+
+    - name: Download sample app test(KSE) and unzip
+      run: |
+        $ErrorActionPreference = 'Stop'
+        $downloadUrl = "https://download.katalon.com/9.6.0/Katalon_Studio_Windows_64-9.6.0.zip"  
+        Invoke-WebRequest $downloadUrl -OutFile  "kse.zip"
+        unzip kse.zip
+
     - name: Parse KRE version
       id: kre
       run: |
@@ -124,7 +114,6 @@ jobs:
       shell: cmd
       run: |
         start /d "C:\Program Files (x86)\Windows Application Driver" WinAppDriver.exe 4723
-        netstat -ano | findstr :4723
         set projectPath=%cd%\web-keywords-automation.prj
         cd Katalon_Studio_Engine_Windows_64-${{steps.kre.outputs.version }}
         katalonc.exe -noSplash -runMode=console -projectPath="%projectPath%" -retry=0 -testSuitePath="Test Suites/Windows Keywords Test" -browserType="Windows" -executionProfile="windows profile" -apiKey="4b2accba-07f7-425d-a371-8a864400fb8d" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true -webui.autoUpdateDrivers=true
