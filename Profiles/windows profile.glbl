@@ -24,4 +24,9 @@
       <initValue>'/Katalon_Studio_Windows_64-9.6.0/katalon.exe'</initValue>
       <name>KatalonPath</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>RunConfiguration.getProjectDir()</initValue>
+      <name>currentProjDir</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

@@ -17,7 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-Windows.startApplication(GlobalVariable.KatalonPath, FailureHandling.STOP_ON_FAILURE)
+Windows.startApplication(GlobalVariable.currentProjDir + GlobalVariable.KatalonPath, FailureHandling.STOP_ON_FAILURE)
 
 beforeDelay = System.currentTimeMillis()
 try {
