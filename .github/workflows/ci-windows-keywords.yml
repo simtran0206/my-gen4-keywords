@@ -116,13 +116,14 @@ jobs:
         Invoke-WebRequest $downloadUrl -OutFile  "kre.zip"
         unzip kre.zip
       
-    - name: Start Win App Driver
-      run: |
-        Start-Process -FilePath "C:\Program Files (x86)\Windows Application Driver\WinAppDriver.exe" -ArgumentList "-port 4723 -host:localhost"
+    # - name: Start Win App Driver
+    #   run: |
+    #     Start-Process -FilePath "C:\Program Files (x86)\Windows Application Driver\WinAppDriver.exe" -ArgumentList "-port 4723 -host:localhost"
     
     - name: Running Windows keywords test script
       shell: cmd
       run: |
+        start /d "C:\Program Files (x86)\Windows Application Driver" WinAppDriver.exe 4723
         netstat -ano | findstr :4723
         set projectPath=%cd%\web-keywords-automation.prj
         cd Katalon_Studio_Engine_Windows_64-${{steps.kre.outputs.version }}
